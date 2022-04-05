@@ -6,13 +6,23 @@ import { AppComponent } from './app.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
+import { NosotrosComponent } from './components/nosotros/nosotros.component';
+import { ListaServiciosComponent } from './components/lista-servicios/lista-servicios.component';
+import { ServicioXComponent } from './components/servicio-x/servicio-x.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { CrudAdminComponent } from './components/crud-admin/crud-admin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    NosotrosComponent,
+    ListaServiciosComponent,
+    ServicioXComponent,
+    PageNotFoundComponent,
+    CrudAdminComponent
   ],
   imports: [
     BrowserModule,
