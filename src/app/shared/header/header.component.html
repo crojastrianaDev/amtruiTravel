@@ -1,1 +1,72 @@
-<p>header works!</p>
+<header>
+  <!--Navegador-->
+  <nav class="navbar navbar-expand-md bg-color navbar-navItem nav-tabs">
+    <!--NAVEGADOR  MOVÍL-->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navMovil"
+    >
+      <span class="navbar-toggler-icon"><i class="bi bi-grid-fill"></i></span>
+    </button>
+
+    <!--Navbar Links-->
+    <div class="container">
+      <div class="">
+        <div class="row">
+          <!-- <div class="col-sm-1"></div> -->
+          <div class="col-sm-3">
+            <a
+              routerLink="/inicio"
+              (click)="ToggleNavBar()"
+              class="navbar-brand"
+              ><img
+                id="Logo"
+                src="favicon.ico"
+                alt="Cursos online, cursos, cursos virtuales y curso  | Momentum, escuela online"
+                title="Cursos online, cursos, cursos virtuales y curso | Momentum, escuela online"
+            /></a>
+          </div>
+          <div class="col-sm-9">
+            <h1>
+              Momentum <br />
+              Escuela online
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse" id="navMovil">
+        <!--  -->
+        <div class="navbar-nav ml-auto">
+          <ul class="navbar-nav nav-tabs">
+            <li class="nav-item" routerLinkActive="active">
+              <a
+                class="nav-link navItem"
+                routerLink="/cursos"
+                (click)="ToggleNavBar()"
+                >Cursos</a
+              >
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+              <a
+                class="nav-link navItem"
+                routerLink="/como-funciona"
+                (click)="ToggleNavBar()"
+                >Metodología</a
+              >
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+              <a
+                class="nav-link navItem"
+                routerLink="/contactos"
+                (click)="ToggleNavBar()"
+                >Contactos</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,26 @@
+.bi {
+  font-size: 2rem;
+}
+i {
+  margin-right: 1em;
+}
+i#icons {
+  margin-right: 1em;
+}
+#salto {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  background-color: aliceblue;
+  opacity: 0.9;
+}
+span {
+  color: black;
+  text-align: center;
+}
+#pol {
+  text-align: justify;
+  color: white;
+}
+#by {
+  text-align: right;
+}

@@ -1,0 +1,12 @@
+header {
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  font-size: x-large;
+  color: #c53b1f;
+  font-weight: 700;
+}
+.contenedor {
+  overflow: hidden;
+}
