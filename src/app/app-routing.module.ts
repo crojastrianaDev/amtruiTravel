@@ -6,6 +6,7 @@ import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ServicioXComponent } from './components/servicio-x/servicio-x.component';
 import { ContactosComponent } from './components/contactos/contactos.component';
+import { LoginAdminComponent } from './components/login-admin/login-admin.component';
 
 const routes: Routes = [
   { path: 'home', component: InicioComponent }, //inicialmente siempre
@@ -15,6 +16,7 @@ const routes: Routes = [
   //{ path: 'tours:id', component: ServicioXComponent },
   { path: 'contactos', component: ContactosComponent },
   { path: 'not-found', component: PageNotFoundComponent },
+  { path: 'login-admin', component: LoginAdminComponent },
   {
     path: 'search/:termino',
     component: ListaServiciosComponent,
