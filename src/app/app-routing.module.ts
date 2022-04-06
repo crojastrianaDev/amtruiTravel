@@ -11,14 +11,15 @@ const routes: Routes = [
   { path: 'home', component: InicioComponent }, //inicialmente siempre
   { path: 'tours', component: ListaServiciosComponent },
   { path: 'nosotros', component: NosotrosComponent },
-  { path: 'tours:id', component: ServicioXComponent },
+  { path: 'tours-id', component: ServicioXComponent },
+  //{ path: 'tours:id', component: ServicioXComponent },
   { path: 'contactos', component: ContactosComponent },
   { path: 'not-found', component: PageNotFoundComponent },
   {
     path: 'search/:termino',
     component: ListaServiciosComponent,
   },
-  { path: '', pathMatch: 'full', redirectTo: 'inicio' }, //ruta de inicial
+  { path: '', pathMatch: 'full', redirectTo: 'home' }, //ruta de inicial
   { path: '**', component: PageNotFoundComponent }, //ruta exep
 ];
 
