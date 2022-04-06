@@ -1,1 +1,56 @@
-<p>inicio works!</p>
+<div class="container">
+  <div class="row">
+    <div class="padre">
+      <div class="swiper-container hijo">
+        <div class="swiper-wrapper col">
+          <!--*ngFor="let item of banner.banner">-->
+          <div class="swiper-slide">
+            <
+            <!--Aqui va el ngfor-->
+            <!--[alt]="item.nombre"
+                      [title]="item.titulo"-->
+            <img
+              class="img-fluid swiper-lazy"
+              src="../../../assets/img/bannerpag-03.jpg"
+            />
+          </div>
+        </div>
+        <!--Paginador-->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="padre col">
+      <div class="hijo card col-12">
+        <div class="card-header">Amtrui Travel</div>
+        <div class="card-body">
+          <h5 class="card-title">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
+            distinctio molestiae. Vero non quos earum?
+          </h5>
+          <p class="card-text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo
+            explicabo iusto id ipsam! Voluptatibus neque autem architecto
+            pariatur exercitationem nemo, totam quod unde ex delectus, quas
+            optio ipsam quia incidunt voluptas minus? Eius commodi aspernatur in
+            quis. At veniam, dolore doloribus harum odit quam, expedita tenetur
+            atque minima inventore praesentium nobis facilis, iste assumenda qui
+            sequi.
+          </p>
+          <a
+            class="nav-link navItem btn btn-outline-success"
+            routerLink="/tours"
+            (click)="ToggleNavBar()"
+            >Ver planes</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

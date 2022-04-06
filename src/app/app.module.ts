@@ -11,6 +11,9 @@ import { ListaServiciosComponent } from './components/lista-servicios/lista-serv
 import { ServicioXComponent } from './components/servicio-x/servicio-x.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CrudAdminComponent } from './components/crud-admin/crud-admin.component';
+import { ContactosComponent } from './components/contactos/contactos.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { LoginAdminComponent } from './components/login-admin/login-admin.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +25,12 @@ import { CrudAdminComponent } from './components/crud-admin/crud-admin.component
     ListaServiciosComponent,
     ServicioXComponent,
     PageNotFoundComponent,
-    CrudAdminComponent
+    CrudAdminComponent,
+    ContactosComponent,
+    LoginAdminComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, NgxPaginationModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

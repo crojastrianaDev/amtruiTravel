@@ -10,3 +10,7 @@ h1 {
 .contenedor {
   overflow: hidden;
 }
+#logo {
+  height: 60px;
+  width: 60px;
+}

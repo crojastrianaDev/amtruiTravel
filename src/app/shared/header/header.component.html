@@ -16,7 +16,7 @@
       <div class="">
         <div class="row">
           <!-- <div class="col-sm-1"></div> -->
-          <div class="col-sm-3">
+          <div class="col-sm-9">
             <a
               routerLink="/inicio"
               (click)="ToggleNavBar()"
@@ -28,44 +28,62 @@
                 title="Cursos online, cursos, cursos virtuales y curso | Momentum, escuela online"
             /></a>
           </div>
-          <div class="col-sm-9">
-            <h1>
-              Momentum <br />
-              Escuela online
-            </h1>
+          <div class="col-sm-3"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="collapse navbar-collapse" id="navMovil">
+          <!--  -->
+          <div class="navbar-nav ml-auto">
+            <ul class="navbar-nav nav-tabs">
+              <li class="nav-item" routerLinkActive="active">
+                <a
+                  class="nav-link navItem"
+                  routerLink="/home"
+                  (click)="ToggleNavBar()"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item" routerLinkActive="active">
+                <a
+                  class="nav-link navItem"
+                  routerLink="/tours"
+                  (click)="ToggleNavBar()"
+                  >Tours</a
+                >
+              </li>
+              <li class="nav-item" routerLinkActive="active">
+                <a
+                  class="nav-link navItem"
+                  routerLink="/nosotros"
+                  (click)="ToggleNavBar()"
+                  >Nosotros</a
+                >
+              </li>
+              <li class="nav-item" routerLinkActive="active">
+                <a
+                  class="nav-link navItem"
+                  routerLink="/contactos"
+                  (click)="ToggleNavBar()"
+                  >Contactos</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-      <div class="collapse navbar-collapse" id="navMovil">
-        <!--  -->
-        <div class="navbar-nav ml-auto">
-          <ul class="navbar-nav nav-tabs">
-            <li class="nav-item" routerLinkActive="active">
-              <a
-                class="nav-link navItem"
-                routerLink="/cursos"
-                (click)="ToggleNavBar()"
-                >Cursos</a
-              >
-            </li>
-            <li class="nav-item" routerLinkActive="active">
-              <a
-                class="nav-link navItem"
-                routerLink="/como-funciona"
-                (click)="ToggleNavBar()"
-                >Metodología</a
-              >
-            </li>
-            <li class="nav-item" routerLinkActive="active">
-              <a
-                class="nav-link navItem"
-                routerLink="/contactos"
-                (click)="ToggleNavBar()"
-                >Contactos</a
-              >
-            </li>
-          </ul>
-        </div>
+      <div class="row">
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Paque turistico"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Vamos a el
+          </button>
+        </form>
       </div>
     </div>
   </nav>
