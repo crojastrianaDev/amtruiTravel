@@ -1,0 +1,9 @@
+.padre {
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hijo {
+  width: max-content;
+}
