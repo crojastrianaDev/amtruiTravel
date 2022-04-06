@@ -14,6 +14,7 @@ import { CrudAdminComponent } from './components/crud-admin/crud-admin.component
 import { ContactosComponent } from './components/contactos/contactos.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { LoginAdminComponent } from './components/login-admin/login-admin.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,12 @@ import { LoginAdminComponent } from './components/login-admin/login-admin.compon
     ContactosComponent,
     LoginAdminComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgxPaginationModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgxPaginationModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

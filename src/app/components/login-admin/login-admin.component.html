@@ -1,1 +1,93 @@
-<p>login-admin works!</p>
+<br />
+<br />
+<br />
+<div class="container">
+  <div class="padre">
+    <div class="hijo">
+      <div class="padre">
+        <div class="hijo">
+          <div class="centrar">
+            <h4>INGRESO</h4>
+          </div>
+        </div>
+      </div>
+      <form [formGroup]="loginForm" (submit)="saveForm($event)">
+        <div class="conten-form">
+          <div class="form-row">
+            <div class="col">
+              <input
+                class="form-control"
+                type="text"
+                name="contraseña"
+                formControlName="contra"
+                placeholder="Tú Contraseña"
+              />
+              <div
+                class="alert-danger"
+                *ngIf="
+                  password?.invalid && (password?.dirty || password?.touched)
+                "
+              >
+                <div
+                  class="container-error-message"
+                  *ngIf="password?.errors?.required"
+                >
+                  Campo requerido
+                </div>
+                <div
+                  class="container-error-message"
+                  *ngIf="password?.errors?.minlength"
+                >
+                  El campo debe tener 5 caracteres mínimo
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
+          <div class="fomt-row">
+            <div class="col">
+              <input
+                class="form-control"
+                type="email"
+                name="correo"
+                formControlName="correo"
+                placeholder="Email"
+              />
+              <div
+                class="alert-danger"
+                *ngIf="correo?.invalid && (correo?.dirty || correo?.touched)"
+              >
+                <div
+                  class="container-error-message"
+                  *ngIf="correo?.errors?.required"
+                >
+                  Campo requerido.
+                </div>
+                <div
+                  class="container-error-message"
+                  *ngIf="correo?.errors?.minlength"
+                >
+                  El campo debe tener 5 caracteres mínimo.
+                </div>
+                <div
+                  class="container-error-message"
+                  *ngIf="correo?.errors?.pattern"
+                >
+                  El valor debe ser un correo valido.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <br />
+      <div class="padre">
+        <div class="hijo">
+          <div class="center">
+            <button type="submit" class="btn btn-primary">Ingresar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
