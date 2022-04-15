@@ -13,37 +13,6 @@
       </div>
       <form [formGroup]="loginForm" (submit)="saveForm($event)">
         <div class="conten-form">
-          <div class="form-row">
-            <div class="col">
-              <input
-                class="form-control"
-                type="text"
-                name="contraseña"
-                formControlName="contra"
-                placeholder="Tú Contraseña"
-              />
-              <div
-                class="alert-danger"
-                *ngIf="
-                  password?.invalid && (password?.dirty || password?.touched)
-                "
-              >
-                <div
-                  class="container-error-message"
-                  *ngIf="password?.errors?.required"
-                >
-                  Campo requerido
-                </div>
-                <div
-                  class="container-error-message"
-                  *ngIf="password?.errors?.minlength"
-                >
-                  El campo debe tener 5 caracteres mínimo
-                </div>
-              </div>
-            </div>
-          </div>
-          <br />
           <div class="fomt-row">
             <div class="col">
               <input
@@ -78,6 +47,38 @@
               </div>
             </div>
           </div>
+          <br />
+          <div class="form-row">
+            <div class="col">
+              <input
+                class="form-control"
+                type="password"
+                name="password"
+                formControlName="password"
+                placeholder="Tú Contraseña"
+              />
+              <div
+                class="alert-danger"
+                *ngIf="
+                  password?.invalid && (password?.dirty || password?.touched)
+                "
+              >
+                <div
+                  class="container-error-message"
+                  *ngIf="password?.errors?.required"
+                >
+                  Campo requerido
+                </div>
+                <div
+                  class="container-error-message"
+                  *ngIf="password?.errors?.minlength"
+                >
+                  El campo debe tener 5 caracteres mínimo
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
         </div>
       </form>
       <br />
