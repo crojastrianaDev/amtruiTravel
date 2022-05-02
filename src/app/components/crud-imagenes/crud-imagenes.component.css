@@ -1,0 +1,9 @@
+.rad {
+  border-radius: 50px;
+}
+.padre {
+  display: flex;
+}
+.hijo {
+  margin-left: 50%;
+}

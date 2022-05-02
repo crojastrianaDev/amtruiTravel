@@ -15,6 +15,8 @@ import { ContactosComponent } from './components/contactos/contactos.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { LoginAdminComponent } from './components/login-admin/login-admin.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CrudImagenesComponent } from './components/crud-imagenes/crud-imagenes.component';
+import { CrudAdminListaComponent } from './components/crud-admin-lista/crud-admin-lista.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CrudAdminComponent,
     ContactosComponent,
     LoginAdminComponent,
+    CrudImagenesComponent,
+    CrudAdminListaComponent,
   ],
   imports: [
     BrowserModule,

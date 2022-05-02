@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { ListaServiciosComponent } from './components/lista-servicios/lista-servicios.component';
@@ -7,6 +7,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { ServicioXComponent } from './components/servicio-x/servicio-x.component';
 import { ContactosComponent } from './components/contactos/contactos.component';
 import { LoginAdminComponent } from './components/login-admin/login-admin.component';
+import { CrudImagenesComponent } from './components/crud-imagenes/crud-imagenes.component';
+import { CrudAdminListaComponent } from './components/crud-admin-lista/crud-admin-lista.component';
 
 const routes: Routes = [
   { path: 'home', component: InicioComponent }, //inicialmente siempre
@@ -21,6 +23,8 @@ const routes: Routes = [
     path: 'search/:termino',
     component: ListaServiciosComponent,
   },
+  { path: 'lista-imagenes', component: CrudImagenesComponent },
+  { path: 'lista-crud', component: CrudAdminListaComponent },
   { path: '', pathMatch: 'full', redirectTo: 'home' }, //ruta de inicial
   { path: '**', component: PageNotFoundComponent }, //ruta exep
 ];
