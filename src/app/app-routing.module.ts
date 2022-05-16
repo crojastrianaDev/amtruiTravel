@@ -15,15 +15,14 @@ const routes: Routes = [
   { path: 'home', component: InicioComponent }, //inicialmente siempre
   { path: 'tours', component: ListaServiciosComponent },
   { path: 'nosotros', component: NosotrosComponent },
-  { path: 'tours-id', component: ServicioXComponent },
-  { path: 'tours:id', component: ServicioXComponent },
+  { path: 'tours/:id', component: ServicioXComponent },
   { path: 'contactos', component: ContactosComponent },
   { path: 'not-found', component: PageNotFoundComponent },
-  { path: 'login-admin', component: LoginAdminComponent },
   {
     path: 'search/:termino',
     component: SearchComponent,
   },
+  { path: 'login-admin', component: LoginAdminComponent },
   { path: 'lista-imagenes', component: CrudImagenesComponent },
   { path: 'lista-crud', component: CrudAdminListaComponent },
   { path: '', pathMatch: 'full', redirectTo: 'home' }, //ruta de inicial
@@ -31,7 +30,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes)], //, { useHash: true }
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

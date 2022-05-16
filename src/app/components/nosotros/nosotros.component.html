@@ -45,16 +45,21 @@
   </div>
 
   <div class="row" *ngIf="!nosotrosService.cargada">
-    <div *ngFor="let nosotros of nosotrosService.nosotros">
+    <div *ngFor="let nosotros of nosotrosService.nosotros; let i = index">
       <div class="col-sm-2"></div>
       <div class="col-sm-3">
-        <img src="{{ nosotros[0].imagen }}" alt="..." class="img-thumbnail" />
+        <img
+          *ngIf="i == 0"
+          src="{{ nosotros.imagen }}"
+          alt="..."
+          class="img-thumbnail"
+        />
       </div>
       <div class="col-sm-1"></div>
       <div class="col-sm-4">
         <div class="card">
-          <div class="card-body">
-            {{ nosotros[0].descri }}
+          <div class="card-body" *ngIf="i == 0">
+            {{ nosotros.descri }}
           </div>
         </div>
       </div>
@@ -62,19 +67,25 @@
     </div>
   </div>
   <br />
+
   <div class="row" *ngIf="!nosotrosService.cargada">
-    <div *ngFor="let nosotros of nosotrosService.nosotros">
+    <div *ngFor="let nosotros of nosotrosService.nosotros; let i = index">
       <div class="col-sm-2"></div>
       <div class="col-sm-4">
         <div class="card">
-          <div class="card-body">
-            {{ nosotros[1].descri }}
+          <div class="card-body" *ngIf="i == 1">
+            {{ nosotros.descri }}
           </div>
         </div>
       </div>
       <div class="col-sm-1"></div>
       <div class="col-sm-3">
-        <img src="{{ nosotros[1].imagen }}" alt="..." class="img-thumbnail" />
+        <img
+          *ngIf="i == 1"
+          src="{{ nosotros.imagen }}"
+          alt="..."
+          class="img-thumbnail"
+        />
       </div>
       <div class="col-sm-2"></div>
     </div>

@@ -20,7 +20,7 @@
             <a routerLink="/home" (click)="ToggleNavBar()" class="navbar-brand"
               ><img
                 id="Logo"
-                src="favicon.ico"
+                src="../../../assets/img/Logo (1).png"
                 alt="Cursos online, cursos, cursos virtuales y curso  | Momentum, escuela online"
                 title="Cursos online, cursos, cursos virtuales y curso | Momentum, escuela online"
             /></a>
@@ -68,15 +68,12 @@
         <form class="form-inline my-2 my-lg-0">
           <input
             class="form-control mr-sm-2"
-            type="search"
+            type="text"
             (keyup.enter)="buscarProducto(txtBuscar.value)"
             placeholder="Paque turistico"
             aria-label="Search"
             #txtBuscar
           />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-            Vamos a el
-          </button>
         </form>
       </div>
     </div>

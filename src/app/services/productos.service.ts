@@ -7,21 +7,30 @@ import { ProductoInterface } from '../models/productos';
 })
 export class ProductosService {
   cargando = true;
+  cargandoId = true;
+  cargandoS = true;
   productos: ProductoInterface[] = [];
   productoFiltrado: ProductoInterface[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    this.cargandoProductos();
+  }
   private cargandoProductos() {
     return new Promise<void>((resolve, reject) => {
       this.http
-        .get('https://appamtruitravel-default-rtdb.firebaseio.com/Tours.json')
+        .get<ProductoInterface[]>(
+          'https://appamtruitravel-default-rtdb.firebaseio.com/Tours.json'
+        )
         .subscribe((res: ProductoInterface[]) => {
           console.log(res);
+          this.cargando = false;
           this.productos = res;
+          resolve();
         });
     });
   }
   getProducto(id: String) {
+    this.cargandoId = false;
     return this.http.get(
       `https://appamtruitravel-default-rtdb.firebaseio.com/Tours/${id}.json`
     );
@@ -38,10 +47,14 @@ export class ProductosService {
   private filtrarProductos(termino: string) {
     this.productoFiltrado = [];
     termino = termino.toLowerCase();
+    console.log('termino tolowercase: ', termino);
     this.productos.forEach((prod) => {
       const tituloLower = prod.nombre.toLowerCase();
+      console.log('titulo tolowercase: ', tituloLower);
       if (tituloLower.indexOf(termino) >= 0) {
         this.productoFiltrado.push(prod);
+        console.log(this.productoFiltrado);
+        this.cargandoS = false;
       }
     });
   }

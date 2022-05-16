@@ -11,6 +11,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {}
   buscarProducto(termino: string) {
+    console.log(termino);
     if (termino.length < 1) {
       //solo vamos a buscar su tengo al menos una letra
       return;

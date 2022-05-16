@@ -9,3 +9,25 @@
 .hijo {
   width: max-content;
 }
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+.rounded-circle {
+  width: 60px;
+  height: 80px;
+}
+.swiper-wrapper {
+  display: inline-flex;
+}
+/* #img{
+    width: 1000px;
+    height: 300px;
+} */
+/* #bn {
+  width: 90%;
+} */
+.img-fluid {
+  width: 100%;
+}

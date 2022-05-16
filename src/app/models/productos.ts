@@ -4,4 +4,5 @@ export interface ProductoInterface {
   nombre: string;
   precio: string;
   cod: string;
+  link: string;
 }

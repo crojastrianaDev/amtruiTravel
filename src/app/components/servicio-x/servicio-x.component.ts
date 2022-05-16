@@ -11,7 +11,7 @@ declare var Swiper: any;
 })
 export class ServicioXComponent implements OnInit {
   [x: string]: any;
-  producto: ProductoInterface | undefined;
+  producto: ProductoInterface | any;
   id: string | undefined;
   constructor(
     private elementRef: ElementRef,
@@ -48,7 +48,7 @@ export class ServicioXComponent implements OnInit {
       console.log(parametros['id']);
       this.productoService
         .getProducto(parametros['id'])
-        .subscribe((producto: ProductoInterface | undefined) => {
+        .subscribe((producto) => {
           this.id = parametros['id'];
           this.producto = producto;
         });

@@ -7,7 +7,12 @@ import { DatosService } from '../../services/datos.service';
   styleUrls: ['./nosotros.component.css'],
 })
 export class NosotrosComponent implements OnInit {
-  constructor(public nosotrosService: DatosService) {}
+  uno: any[] = [];
+  dos: any[] = [];
+  constructor(public nosotrosService: DatosService) {
+    this.uno = this.nosotrosService.nosotros[0];
+    console.log('uno', this.uno);
+  }
 
   ngOnInit(): void {}
 }
