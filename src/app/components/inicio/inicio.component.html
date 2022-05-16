@@ -1,47 +1,93 @@
 <div class="container">
-  <div class="row">
-    <div class="padre">
-      <div class="swiper-container hijo">
-        <div class="swiper-wrapper col">
-          <!--*ngFor="let item of banner.banner">-->
-          <div class="swiper-slide">
-            <
-            <!--Aqui va el ngfor-->
-            <!--[alt]="item.nombre"
-                      [title]="item.titulo"-->
-            <img
-              class="img-fluid swiper-lazy"
-              src="../../../assets/img/bannerpag-03.jpg"
-            />
-          </div>
-        </div>
-        <!--Paginador-->
-        <div class="swiper-pagination"></div>
-        <!-- Add Arrows -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-scrollbar"></div>
-      </div>
+  <div align="center" *ngIf="bannerService.cargada">
+    <h2>Cargando...</h2>
+    <div class="loader loader--style1" title="0">
+      <svg
+        version="1.1"
+        id="loader-1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        width="40px"
+        height="40px"
+        viewBox="0 0 40 40"
+        enable-background="new 0 0 40 40"
+        xml:space="preserve"
+      >
+        <path
+          opacity="0.2"
+          fill="#000"
+          d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+              s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
+              c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"
+        />
+        <path
+          fill="#000"
+          d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+              C22.32,8.481,24.301,9.057,26.013,10.047z"
+        >
+          <animateTransform
+            attributeType="xml"
+            attributeName="transform"
+            type="rotate"
+            from="0 20 20"
+            to="360 20 20"
+            dur="0.5s"
+            repeatCount="indefinite"
+          />
+        </path>
+      </svg>
     </div>
+    <p>Espere porfavor</p>
   </div>
+
+  <section id="slider" class="container-fluid" *ngIf="!bannerService.cargada">
+    <div class="swiper-container" id="img">
+      <div class="swiper-wrapper">
+        <!--*ngFor="let item of banner.banner">-->
+        <div class="swiper-slide" *ngFor="let item of bannerService.banner">
+          <!--Aqui va el ngfor-->
+          <!--[alt]="item.nombre"
+                      [title]="item.titulo"-->
+          <img
+            class="img-fluid swiper-lazy"
+            src="{{ item.img }}"
+            alt="Banner"
+            title="Amtrui travel | turismo | colombia"
+            id="bn"
+          />
+        </div>
+      </div>
+      <!--Paginador-->
+      <div class="swiper-pagination"></div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-scrollbar"></div>
+    </div>
+  </section>
   <br />
   <div class="row">
     <div class="padre col">
       <div class="hijo card col-12">
         <div class="card-header">Amtrui Travel</div>
         <div class="card-body">
-          <h5 class="card-title">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
-            distinctio molestiae. Vero non quos earum?
-          </h5>
+          <h5 class="card-title">Silvia Cauca, un paraiso por descubir</h5>
           <p class="card-text">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo
-            explicabo iusto id ipsam! Voluptatibus neque autem architecto
-            pariatur exercitationem nemo, totam quod unde ex delectus, quas
-            optio ipsam quia incidunt voluptas minus? Eius commodi aspernatur in
-            quis. At veniam, dolore doloribus harum odit quam, expedita tenetur
-            atque minima inventore praesentium nobis facilis, iste assumenda qui
-            sequi.
+            Silvia es una ciudad y municipio del departamento del Cauca,
+            Colombia, municipio colombiano ubicado en el departamento del Cauca.
+            Está ubicado en un valle interandino (2620 metros sobre el nivel del
+            mar) en la cordillera central de Colombia. La población de Silvia se
+            estima en 35.000 habitantes. Las principales actividades económicas
+            son la ganadería tradicional, la agricultura y el turismo. A menudo
+            es visto como una escapada de fin de semana por los residentes de
+            Cali, que tiene un clima mucho más cálido. Hay muchas panaderías y
+            restaurantes económicos en la ciudad, la mayoría a medio kilómetro
+            de la gran plaza pública. En la última década, los grandes árboles
+            que antes crecían en la plaza fueron removidos por los daños que
+            estaban causando sus raíces y la plaza fue renovada para incluir más
+            asientos y replanteada con una mayor variedad de vegetación.
           </p>
           <a
             class="nav-link navItem btn btn-outline-success"

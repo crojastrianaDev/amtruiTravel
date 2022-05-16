@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { InicioComponent } from './components/inicio/inicio.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
@@ -17,6 +18,7 @@ import { LoginAdminComponent } from './components/login-admin/login-admin.compon
 import { ReactiveFormsModule } from '@angular/forms';
 import { CrudImagenesComponent } from './components/crud-imagenes/crud-imagenes.component';
 import { CrudAdminListaComponent } from './components/crud-admin-lista/crud-admin-lista.component';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -33,12 +35,14 @@ import { CrudAdminListaComponent } from './components/crud-admin-lista/crud-admi
     LoginAdminComponent,
     CrudImagenesComponent,
     CrudAdminListaComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgxPaginationModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

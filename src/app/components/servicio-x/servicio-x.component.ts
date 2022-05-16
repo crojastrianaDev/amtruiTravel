@@ -1,4 +1,7 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ProductosService } from '../../services/productos.service';
+import { ProductoInterface } from '../../models/productos';
 declare var Swiper: any;
 
 @Component({
@@ -8,7 +11,13 @@ declare var Swiper: any;
 })
 export class ServicioXComponent implements OnInit {
   [x: string]: any;
-  constructor(private elementRef: ElementRef) {}
+  producto: ProductoInterface | any;
+  id: string | undefined;
+  constructor(
+    private elementRef: ElementRef,
+    private route: ActivatedRoute,
+    public productoService: ProductosService
+  ) {}
   ngAfterViewInit(): void {
     this.swiper = new Swiper(
       this.elementRef.nativeElement.querySelector('.swiper-container'),
@@ -34,5 +43,15 @@ export class ServicioXComponent implements OnInit {
     );
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.route.params.subscribe((parametros) => {
+      console.log(parametros['id']);
+      this.productoService
+        .getProducto(parametros['id'])
+        .subscribe((producto) => {
+          this.id = parametros['id'];
+          this.producto = producto;
+        });
+    });
+  }
 }

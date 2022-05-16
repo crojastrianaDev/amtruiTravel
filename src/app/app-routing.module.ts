@@ -9,20 +9,20 @@ import { ContactosComponent } from './components/contactos/contactos.component';
 import { LoginAdminComponent } from './components/login-admin/login-admin.component';
 import { CrudImagenesComponent } from './components/crud-imagenes/crud-imagenes.component';
 import { CrudAdminListaComponent } from './components/crud-admin-lista/crud-admin-lista.component';
+import { SearchComponent } from './components/search/search.component';
 
 const routes: Routes = [
   { path: 'home', component: InicioComponent }, //inicialmente siempre
   { path: 'tours', component: ListaServiciosComponent },
   { path: 'nosotros', component: NosotrosComponent },
-  { path: 'tours-id', component: ServicioXComponent },
-  //{ path: 'tours:id', component: ServicioXComponent },
+  { path: 'tours/:id', component: ServicioXComponent },
   { path: 'contactos', component: ContactosComponent },
   { path: 'not-found', component: PageNotFoundComponent },
-  { path: 'login-admin', component: LoginAdminComponent },
   {
     path: 'search/:termino',
-    component: ListaServiciosComponent,
+    component: SearchComponent,
   },
+  { path: 'login-admin', component: LoginAdminComponent },
   { path: 'lista-imagenes', component: CrudImagenesComponent },
   { path: 'lista-crud', component: CrudAdminListaComponent },
   { path: '', pathMatch: 'full', redirectTo: 'home' }, //ruta de inicial
@@ -30,7 +30,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes)], //, { useHash: true }
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
