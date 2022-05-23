@@ -45,9 +45,12 @@
   </div>
 
   <div class="row" *ngIf="!nosotrosService.cargada">
-    <div *ngFor="let nosotros of nosotrosService.nosotros; let i = index">
+    <div
+      class="row"
+      *ngFor="let nosotros of nosotrosService.nosotros; let i = index"
+    >
       <div class="col-sm-2"></div>
-      <div class="col-sm-3">
+      <div class="col-sm-4" id="img">
         <img
           *ngIf="i == 0"
           src="{{ nosotros.imagen }}"
@@ -63,13 +66,17 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-2"></div>
+      <div class="col-sm-1"></div>
     </div>
   </div>
+
   <br />
 
   <div class="row" *ngIf="!nosotrosService.cargada">
-    <div *ngFor="let nosotros of nosotrosService.nosotros; let i = index">
+    <div
+      class="row"
+      *ngFor="let nosotros of nosotrosService.nosotros; let i = index"
+    >
       <div class="col-sm-2"></div>
       <div class="col-sm-4">
         <div class="card">
@@ -79,7 +86,7 @@
         </div>
       </div>
       <div class="col-sm-1"></div>
-      <div class="col-sm-3">
+      <div class="col-sm-4">
         <img
           *ngIf="i == 1"
           src="{{ nosotros.imagen }}"
@@ -87,7 +94,7 @@
           class="img-thumbnail"
         />
       </div>
-      <div class="col-sm-2"></div>
+      <div class="col-sm-1"></div>
     </div>
   </div>
 </div>
